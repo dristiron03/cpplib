@@ -1,3 +1,6 @@
+#ifndef TIMER_H
+#define TIMER_H
+
 #include <iostream>
 #include <chrono>
 
@@ -20,3 +23,5 @@ public:
     std::cout << time << "ms" << std::endl;
   }
 };
+
+#endif
