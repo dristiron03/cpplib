@@ -1,3 +1,6 @@
+#ifndef THREAD_POOL
+#define THREAD_POOL
+
 #include <vector>
 #include <queue>
 #include <cassert>
@@ -10,7 +13,7 @@ struct Executable {
 };
 
 class ThreadPool {
-  int nthreads; 
+  int nthreads;
   std::atomic<bool> running{true};
 
   std::vector<pthread_t> thread_ids;
@@ -69,7 +72,7 @@ private:
       task_queue.pop();
 
       pthread_mutex_unlock(&event_mutex);
-      
+
       if (task != nullptr) task->run();
     }
   }
@@ -78,8 +81,10 @@ private:
     running = false;
     pthread_cond_broadcast(&event_cond);
 
-    for (pthread_t& tid: thread_ids) {
+    for (pthread_t& tid : thread_ids) {
       pthread_join(tid, nullptr);
     }
   }
 };
+
+#endif

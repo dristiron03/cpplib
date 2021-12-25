@@ -13,3 +13,5 @@
 * [`unique_ptr` in C++](https://docs.microsoft.com/en-us/cpp/cpp/how-to-create-and-use-unique-ptr-instances?view=msvc-160)<br>
 
 * [What is `dynamic_cast` in C++ ?](https://www.ibm.com/docs/en/zos/2.4.0?topic=expressions-dynamic-cast-operator-c-only)<br>
+
+* [Diamond problem and Virtual base class](https://stackoverflow.com/questions/2659116/how-does-virtual-inheritance-solve-the-diamond-multiple-inheritance-ambiguit)<br>
